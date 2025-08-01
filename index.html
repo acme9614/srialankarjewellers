@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShriAlankar Jewellers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- AOS CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body >
+    <!-- Header -->
+    <div>
+      <header
+        class="bg-white shadow-md text-gray-900 relative flex items-center justify-start px-4 md:px-10"
+        data-aos="fade-down"
+      >
+        <!-- Centered Logo -->
+        <div
+          class="text-2xl font-bold text-[#133235] flex items-center gap-2 py-4"
+        >
+          <img src="assets/logo.png" alt="Logo" class="h-16" />
+        </div>
+
+        <!-- Hamburger Icon using Image -->
+        <button
+          id="menu-toggle"
+          class="absolute right-4 top-1/2 -translate-y-1/2 focus:outline-none"
+          aria-label="Open Menu"
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/12804/12804141.png"
+            alt="menu"
+            class="w-16 h-16"
+            loading="lazy"
+          />
+        </button>
+      </header>
+
+      <!-- Drawer -->
+      <div
+  id="drawer"
+  class="fixed top-0 left-0 w-1/2 max-w-sm h-full bg-white shadow-lg z-50 transform -translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto"
+>
+        <div class="flex justify-between items-center gap-4 px-4 py-4 border-b">
+          <!-- Drawer Logo -->
+          <div
+            class="text-2xl font-bold text-[#133235] flex items-center gap-2"
+          >
+            <img src="assets/logo.png" alt="Logo" class="h-16" />
+          </div>
+          <!-- Close Drawer Button -->
+          <button
+            id="close-drawer"
+            class="text-black rounded text-2xl font-bold"
+            aria-label="Close Menu"
+          >
+            ✕
+          </button>
+        </div>
+
+        <!-- Drawer Navigation Links -->
+        <nav class="flex flex-col gap-4 px-6 py-6 text-black">
+          <a href="#" onclick="navigateToScheme()">Scheme</a>
+          <a href="#" onclick="navigateToCatalogues()">Catalogues</a>
+          <a href="#" onclick="navigateToQuickPurchase()">Quick Purchase</a>
+          <a href="#" onclick="navigateToBankDetails()">Bank</a>
+          <a href="#" onclick="navigateToKyc()">KYC</a>
+          <a href="#" onclick="navigateToRate()">Rate</a>
+          <a href="#" onclick="navigateSchemeRecords()">Records</a>
+          <a href="#" onclick="navigateToCustomerCard()">Card</a>
+          <a href="#" onclick="navigateTransactionHistory()">History</a>
+          <a href="#" onclick="navigateToMyOrder()">Order</a>
+          <a href="#" onclick="navigateToUserProfile()">Profile</a>
+          <a href="#" onclick="navigateToDigitalGold()">Gold</a>
+          <a href="#" onclick="navigateToPanchang()">Panchang</a>
+          <a href="#" onclick="navigateToSetting()">Settings</a>
+        </nav>
+      </div>
+
+      <!-- Overlay -->
+      <div
+        id="overlay"
+        class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden"
+      ></div>
+    </div>
+
+    <!-- brnading video  visible on deskstop-->
+    <section class="hidden lg:block w-full h-[80vh] overflow-hidden bg-black">
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="w-full h-[600px] object-cover"
+      >
+        <source src="assets/branding_video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <!-- branding images slider  visible on mobile and tablet  -->
+
+    <div class="block lg:hidden bg-black">
+      <div class="swiper myMobileSlider">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+            <img
+              src="assets/IMAGE1.png"
+              alt="Slide 1"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <img
+              src="assets/IMAGE2.png"
+              alt="Slide 2"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <!-- Slide 3 -->
+          <div class="swiper-slide">
+            <img
+              src="assets/IMAGE3.png"
+              alt="Slide 3"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <!-- Slide 4 -->
+          <div class="swiper-slide">
+            <img
+              src="assets/IMAGE4.png"
+              alt="Slide 4"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- title info  -->
+    <div class="max-w-3xl mx-auto px-4 py-6 text-center">
+      <h2
+        class="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-wide text-gray-800 font-serif leading-relaxed"
+      >
+        <span class="text-gray-700 font-light italic">
+          Crafting timeless elegance with exquisite gold, diamond, and platinum
+          jewelry, blending tradition with modern artistry.
+        </span>
+      </h2>
+    </div>
+
+    <!-- services  -->
+    <section class="px-4 py-8">
+      <!-- Tabs Grid -->
+      <div
+        id="tabsGrid"
+        class="max-w-4xl mx-auto grid grid-cols-3 md:grid-cols-6 lg:grid-cols-7  gap-4 place-items-center"
+      >
+        <!-- Tab 1 -->
+        <div class="relative w-32 h-28" data-aos="zoom-in" data-aos-delay="0">
+          <img
+            src="assets/shape.png"
+            class="w-full h-full rounded-b-full cursor-pointer"
+            onclick="navigateToScheme()"
+          />
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/10150/10150740.png"
+              class="w-8 h-8 mb-1 invert"
+            />
+            <span class="text-sm text-white">Scheme</span>
+          </div>
+        </div>
+
+         <div class="relative w-32 h-28" data-aos="zoom-in" data-aos-delay="0">
+          <img
+            src="assets/shape.png"
+            class="w-full h-full rounded-b-full cursor-pointer"
+            onclick="navigateToCatalogues()"
+          />
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/29/29341.png"
+              class="w-8 h-8 mb-1 invert"
+            />
+            <span class="text-sm text-white">Catalogues</span>
+          </div>
+        </div>
+
+         <div class="relative w-32 h-28" data-aos="zoom-in" data-aos-delay="0">
+          <img
+            src="assets/shape.png"
+            class="w-full h-full rounded-b-full cursor-pointer"
+            onclick="navigateToQuickPurchase()"
+          />
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/1019/1019709.png"
+              class="w-8 h-8 mb-1 invert"
+            />
+            <span class="text-sm text-white">Quick <br> Purchase</span>
+          </div>
+        </div>
+
+
+        <!-- Tab 2 -->
+        <div class="relative w-32 h-28" data-aos="zoom-in" data-aos-delay="100">
+          <img
+            src="assets/shape.png"
+            class="w-full h-full rounded-b-full cursor-pointer"
+            onclick="navigateToBankDetails()"
+          />
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/522/522554.png"
+              class="w-8 h-8 mb-1 invert"
+            />
+            <span class="text-sm text-white">Bank</span>
+          </div>
+        </div>
+        <!-- Tab 3 -->
+        <div class="relative w-32 h-28" data-aos="zoom-in" data-aos-delay="200">
+          <img
+            src="assets/shape.png"
+            class="w-full h-full rounded-b-full cursor-pointer"
+            onclick="navigateToKyc()"
+          />
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/18282/18282110.png"
+              class="w-8 h-8 mb-1 invert"
+            />
+            <span class="text-sm text-white">KYC</span>
+          </div>
+        </div>
+        <!-- Tab 4 -->
+        <div class="relative w-32 h-28" data-aos="zoom-in" data-aos-delay="300">
+          <img
+            src="assets/shape.png"
+            class="w-full h-full rounded-b-full cursor-pointer"
+            onclick="navigateToRate()"
+          />
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/592/592015.png"
+              class="w-8 h-8 mb-1 invert"
+            />
+            <span class="text-sm text-white">Rate</span>
+          </div>
+        </div>
+        <!-- Tab 5 -->
+        <div  class="relative w-32 h-28 hidden sm:block"
+          data-extra
+          data-aos="zoom-in"
+          data-aos-delay="600">
+          <img
+            src="assets/shape.png"
+            class="w-full h-full rounded-b-full cursor-pointer"
+            onclick="navigateSchemeRecords()"
+          />
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/2910/2910768.png"
+              class="w-8 h-8 mb-1 invert"
+            />
+            <span class="text-sm text-white">Records</span>
+          </div>
+        </div>
+        <!-- Tab 6 -->
+        <div  class="relative w-32 h-28 hidden sm:block"
+          data-extra
+          data-aos="zoom-in"
+          data-aos-delay="600">
+          <img
+            src="assets/shape.png"
+            class="w-full h-full rounded-b-full cursor-pointer"
+            onclick="navigateToCustomerCard()"
+          />
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/3037/3037255.png"
+              class="w-8 h-8 mb-1 invert"
+            />
+            <span class="text-sm text-white">Card</span>
+          </div>
+        </div>
+
+        <!-- Extra Tabs Hidden by Default on Mobile -->
+        <!-- Tab 7 -->
+        <div
+          class="relative w-32 h-28 hidden sm:block"
+          data-extra
+          data-aos="zoom-in"
+          data-aos-delay="600"
+        >
+          <img
+            src="assets/shape.png"
+            class="w-full h-full rounded-b-full cursor-pointer"
+            onclick="navigateTransactionHistory()"
+          />
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/3503/3503786.png"
+              class="w-8 h-8 mb-1 invert"
+            />
+            <span class="text-sm text-white">History</span>
+          </div>
+        </div>
+        <!-- Tab 8 -->
+        <div
+          class="relative w-32 h-28 hidden sm:block"
+          data-extra
+          data-aos="zoom-in"
+          data-aos-delay="700"
+        >
+          <img
+            src="assets/shape.png"
+            class="w-full h-full rounded-b-full cursor-pointer"
+            onclick="navigateToMyOrder()"
+          />
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/10597/10597732.png"
+              class="w-8 h-8 mb-1 invert"
+            />
+            <span class="text-sm text-white">Order</span>
+          </div>
+        </div>
+        <!-- Tab 9 -->
+        <div
+          class="relative w-32 h-28 hidden sm:block"
+          data-extra
+          data-aos="zoom-in"
+          data-aos-delay="800"
+        >
+          <img
+            src="assets/shape.png"
+            class="w-full h-full rounded-b-full cursor-pointer"
+            onclick="navigateToUserProfile()"
+          />
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/1946/1946429.png"
+              class="w-8 h-8 mb-1 invert"
+            />
+            <span class="text-sm text-white">Profile</span>
+          </div>
+        </div>
+        <!-- Tab 10 -->
+        <div
+          class="relative w-32 h-28 hidden sm:block"
+          data-extra
+          data-aos="zoom-in"
+          data-aos-delay="900"
+        >
+          <img
+            src="assets/shape.png"
+            class="w-full h-full rounded-b-full cursor-pointer"
+            onclick="navigateToDigitalGold()"
+          />
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/1473/1473430.png"
+              class="w-8 h-8 mb-1 invert"
+            />
+            <span class="text-sm text-white">Gold</span>
+          </div>
+        </div>
+        <!-- Tab 11 -->
+        <div
+          class="relative w-32 h-28 hidden sm:block"
+          data-extra
+          data-aos="zoom-in"
+          data-aos-delay="1000"
+        >
+          <img
+            src="assets/shape.png"
+            class="w-full h-full rounded-b-full cursor-pointer"
+            onclick="navigateToPanchang()"
+          />
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/3013/3013143.png"
+              class="w-8 h-8 mb-1 invert"
+            />
+            <span class="text-sm text-white">Panchang</span>
+          </div>
+        </div>
+        <!-- Tab 12 -->
+        <div
+          class="relative w-32 h-28 hidden sm:block"
+          data-extra
+          data-aos="zoom-in"
+          data-aos-delay="1100"
+        >
+          <img
+            src="assets/shape.png"
+            class="w-full h-full rounded-b-full cursor-pointer"
+            onclick="navigateToSetting()"
+          />
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/2099/2099058.png"
+              class="w-8 h-8 mb-1 invert"
+            />
+            <span class="text-sm text-white">Settings</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Toggle Button -->
+      <div
+        onclick="toggleTabs()"
+        class="mt-6 flex flex-col items-center mobile-only-toggle"
+      >
+        <button class="flex items-center gap-1 font-medium">
+          <svg
+            id="toggleIcon"
+            class="w-8 h-8 transition-transform"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+        </button>
+        <span id="toggleText">Show More</span>
+      </div>
+    </section>
+
+    <!-- about us  -->
+    <!-- Our Story Section -->
+    <section class="md:py-16 bg-white">
+      <div
+        class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-10"
+      >
+        <div
+          class="md:w-1/2 md:order-2"
+          data-aos="fade-down"
+          data-aos-duration="1000"
+        >
+          <h2 class="text-4xl font-bold text-yellow-800 mb-6">Our Story</h2>
+          <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+            Founded over a century ago in Ranchi,
+            <span class="font-semibold text-yellow-800"
+              >Sri Alankar Jewellers</span
+            >
+            has been synonymous with timeless craftsmanship and luxurious
+            designs. Our legacy is built on the art of combining traditional
+            techniques with modern innovation.
+          </p>
+          <p class="text-lg text-gray-700 leading-relaxed">
+            From exquisite bridal sets to everyday masterpieces, our commitment
+            is to create jewelry that not only adorns you but also connects you
+            with a rich cultural legacy.
+          </p>
+        </div>
+
+        <div class="md:w-1/2" data-aos="fade-down" data-aos-duration="1000">
+          <img
+            src="https://www.srialankarjewellers.com/images/1.png"
+            alt="Our Story"
+            class="w-full shadow-xl border-4 border-yellow-100"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Innovation & R&D Section -->
+    <section class="py-6 md:py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <div
+          class="text-center mb-12"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <h2 class="text-4xl font-bold text-yellow-800 mb-2">
+            Innovation &amp; R&amp;D
+          </h2>
+          <p class="text-gray-600 text-lg">
+            Pioneering new designs and techniques in jewelry craftsmanship.
+          </p>
+        </div>
+        <div class="flex flex-col md:flex-row items-center gap-10">
+          <div
+            class="md:w-1/2 md:order-2"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <img
+              src="https://www.srialankarjewellers.com/images/9.png"
+              alt="Innovation & R&D"
+              class="w-full shadow-2xl border-4 border-yellow-100"
+            />
+          </div>
+          <div
+            class="md:w-1/2 md:order-1"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <h3 class="text-3xl font-semibold text-yellow-800 mb-6">
+              Research &amp; Development
+            </h3>
+            <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+              At Sri Alankar Jewellers, innovation is at the heart of what we
+              do. Our dedicated R&amp;D team explores both ancient techniques
+              and modern technologies to create jewelry that is both timeless
+              and contemporary.
+            </p>
+            <p class="text-lg text-gray-700 leading-relaxed">
+              We continuously invest in new tools, techniques, and quality
+              controls to ensure every piece meets the highest standards.
+              Passion and tradition fuel every design we create.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- policy  -->
+  <section class="bg-white py-10">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+
+      <!-- Block 1 -->
+      <div class="flex flex-col items-center space-y-3" data-aos="fade-up">
+        <img src="https://cdn-icons-png.flaticon.com/128/636/636600.png" class="w-12 h-12" alt="Craftsmanship Icon" />
+        <h6 class="text-lg font-semibold font-serif text-gray-800">Timeless Craftsmanship</h6>
+        <p class="text-sm text-gray-600  italic">Jewels that reflect tradition & heritage</p>
+      </div>
+
+      <!-- Block 2 -->
+      <div class="flex flex-col items-center space-y-3" data-aos="fade-up" data-aos-delay="100">
+        <img src="https://cdn-icons-png.flaticon.com/128/927/927567.png" class="w-12 h-12" alt="Emotions Icon" />
+        <h6 class="text-lg font-semibold font-serif text-gray-800">Jewellery with Emotions</h6>
+        <p class="text-sm text-gray-600  italic">Every piece tells a story of love & legacy</p>
+      </div>
+
+      <!-- Block 3 -->
+      <div class="flex flex-col items-center space-y-3" data-aos="fade-up" data-aos-delay="200">
+        <img src="https://cdn-icons-png.flaticon.com/128/5462/5462889.png" class="w-12 h-12" alt="Trust Icon" />
+        <h6 class="text-lg font-semibold font-serif text-gray-800">A Bond of Trust</h6>
+        <p class="text-sm text-gray-600  italic">Serving generations with honesty & purity</p>
+      </div>
+
+      <!-- Block 4 -->
+      <div class="flex flex-col items-center space-y-3" data-aos="fade-up" data-aos-delay="300">
+        <img src="https://cdn-icons-png.flaticon.com/128/2549/2549594.png" class="w-12 h-12" alt="Gift Icon" />
+        <h6 class="text-lg font-semibold font-serif text-gray-800">Celebrate Every Occasion</h6>
+        <p class="text-sm text-gray-600  italic">Perfect jewellery for life’s precious moments</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+   
+  <footer class="font-[Inter]">
+  <!-- Footer Contact Section -->
+  <div class="w-full px-4 py-6 md:py-10 bg-[#F7F7F7]">
+    <div class="max-w-6xl mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-2 items-start">
+      <!-- Social Icons -->
+      <div class="flex flex-col items-center justify-center h-full gap-4 mt-4 md:mt-0 md:mb-10">
+        <!-- Center: Logo -->
+        <div class="w-full md:w-2/3 text-start md:text-center mb-5 md:mb-0">
+          <a href="#" class="flex items-center justify-start md:justify-center space-x-2">
+            <img
+              src="assets/logo.png"
+              alt="Logo"
+              class="h-16  md:w-[300px] object-contain"
+            />
+          </a>
+         
+       
+        </div>
+      </div>
+
+      <!-- Contact Details -->
+      <div class="space-y-3 text-black">
+     
+        <p class="font-semibold text-xl mb-6">Contact Us</p>
+        <p>
+       <span class="text-xl"> 🏚️ Address: AC Market, GEL Church Complex, Mahatma Gandhi Main Rd, Kanka, Ranchi, Jharkhand 834001 </span><br> <br>
+       <span class="text-xl"> 📧 Email: srialankarjewellers@yahoo.co.in</span> <br> <br>
+       <span class="text-xl"> 📞 Phone: 0651 233 0312 </span>
+        </p>
+
+        
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+  
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

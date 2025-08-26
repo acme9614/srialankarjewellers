@@ -73,8 +73,8 @@
         <!-- Drawer Navigation Links -->
         <nav class="flex flex-col gap-4 px-6 py-6 text-black">
           <a href="#" onclick="navigateToScheme()">Scheme</a>
-          <a href="#" onclick="navigateToCatalogues()">Catalogues</a>
-          <a href="#" onclick="navigateToQuickPurchase()">Quick Purchase</a>
+          <!-- <a href="#" onclick="navigateToCatalogues()">Catalogues</a> -->
+          <!-- <a href="#" onclick="navigateToQuickPurchase()">Quick Purchase</a> -->
           <a href="#" onclick="navigateToBankDetails()">Bank</a>
           <a href="#" onclick="navigateToKyc()">KYC</a>
           <a href="#" onclick="navigateToRate()">Rate</a>
@@ -168,7 +168,7 @@
       <!-- Tabs Grid -->
       <div
         id="tabsGrid"
-        class="max-w-4xl mx-auto grid grid-cols-3 md:grid-cols-6 lg:grid-cols-7  gap-4 place-items-center"
+        class="max-w-4xl mx-auto grid grid-cols-3 md:grid-cols-6 lg:grid-cols-6  gap-4 place-items-center"
       >
         <!-- Tab 1 -->
         <div class="relative w-32 h-28" data-aos="zoom-in" data-aos-delay="0">
@@ -185,40 +185,6 @@
               class="w-8 h-8 mb-1 invert"
             />
             <span class="text-sm text-white">Scheme</span>
-          </div>
-        </div>
-
-         <div class="relative w-32 h-28" data-aos="zoom-in" data-aos-delay="0">
-          <img
-            src="assets/shape.png"
-            class="w-full h-full rounded-b-full cursor-pointer"
-            onclick="navigateToCatalogues()"
-          />
-          <div
-            class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none"
-          >
-            <img
-              src="https://cdn-icons-png.flaticon.com/128/29/29341.png"
-              class="w-8 h-8 mb-1 invert"
-            />
-            <span class="text-sm text-white">Catalogues</span>
-          </div>
-        </div>
-
-         <div class="relative w-32 h-28" data-aos="zoom-in" data-aos-delay="0">
-          <img
-            src="assets/shape.png"
-            class="w-full h-full rounded-b-full cursor-pointer"
-            onclick="navigateToQuickPurchase()"
-          />
-          <div
-            class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none"
-          >
-            <img
-              src="https://cdn-icons-png.flaticon.com/128/1019/1019709.png"
-              class="w-8 h-8 mb-1 invert"
-            />
-            <span class="text-sm text-white">Quick <br> Purchase</span>
           </div>
         </div>
 
@@ -275,8 +241,8 @@
           </div>
         </div>
         <!-- Tab 5 -->
-        <div  class="relative w-32 h-28 hidden sm:block"
-          data-extra
+        <div  class="relative w-32 h-28 "
+         
           data-aos="zoom-in"
           data-aos-delay="600">
           <img
@@ -295,8 +261,8 @@
           </div>
         </div>
         <!-- Tab 6 -->
-        <div  class="relative w-32 h-28 hidden sm:block"
-          data-extra
+        <div  class="relative w-32 h-28 "
+         
           data-aos="zoom-in"
           data-aos-delay="600">
           <img
@@ -404,6 +370,45 @@
             <span class="text-sm text-white">Gold</span>
           </div>
         </div>
+
+
+<!-- 
+         <div class="relative w-32 h-28 sm:block"  data-extra data-aos="zoom-in" data-aos-delay="1100" >
+          <img
+            src="assets/shape.png"
+            class="w-full h-full rounded-b-full cursor-pointer"
+            onclick="navigateToCatalogues()"
+          />
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/29/29341.png"
+              class="w-8 h-8 mb-1 invert"
+            />
+            <span class="text-sm text-white">Catalogues</span>
+          </div>
+        </div>
+
+         <div class="relative w-32 h-28 sm:block"  data-extra  data-aos="zoom-in" data-aos-delay="1200" >
+          <img
+            src="assets/shape.png"
+            class="w-full h-full rounded-b-full cursor-pointer"
+            onclick="navigateToQuickPurchase()"
+          />
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/1019/1019709.png"
+              class="w-8 h-8 mb-1 invert"
+            />
+            <span class="text-sm text-white">Quick <br> Purchase</span>
+          </div>
+        </div> -->
+
+
+
         <!-- Tab 11 -->
         <div
           class="relative w-32 h-28 hidden sm:block"

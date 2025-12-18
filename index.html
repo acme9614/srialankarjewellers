@@ -52,12 +52,12 @@
         <a href="#" onclick="navigateToScheme()">Scheme</a>
         <!-- <a href="#" onclick="navigateToCatalogues()">Catalogues</a> -->
         <!-- <a href="#" onclick="navigateToQuickPurchase()">Quick Purchase</a> -->
-        <a href="#" onclick="navigateToBankDetails()">Bank</a>
+        <!-- <a href="#" onclick="navigateToBankDetails()">Bank</a> -->
         <a href="#" onclick="navigateToKyc()">KYC</a>
         <a href="#" onclick="navigateToRate()">Rate</a>
         <a href="#" onclick="navigateSchemeRecords()">Records</a>
-        <a href="#" onclick="navigateToCustomerCard()">Card</a>
-        <a href="#" onclick="navigateTransactionHistory()">History</a>
+        <!-- <a href="#" onclick="navigateToCustomerCard()">Card</a> -->
+        <!-- <a href="#" onclick="navigateTransactionHistory()">History</a> -->
         <a href="#" onclick="navigateToMyOrder()">Order</a>
         <a href="#" onclick="navigateToUserProfile()">Profile</a>
         <!-- <a href="#" onclick="navigateToDigitalGold()">Gold</a> -->
@@ -97,7 +97,7 @@
   <section class="px-4 py-8">
     <!-- Tabs Grid -->
     <div id="tabsGrid"
-      class="max-w-4xl mx-auto grid grid-cols-3 md:grid-cols-5 lg:grid-cols-5  gap-4 place-items-center justify-center">
+      class="max-w-4xl mx-auto grid grid-cols-3 md:grid-cols-4 lg:grid-cols-4  gap-4 place-items-center justify-center">
       <!-- Tab 1 -->
       <div class="relative w-32 h-28" data-aos="zoom-in" data-aos-delay="0">
         <img src="assets/shape.png" class="w-full h-full rounded-b-full cursor-pointer" onclick="navigateToScheme()" />
@@ -109,14 +109,14 @@
 
 
       <!-- Tab 2 -->
-      <div class="relative w-32 h-28" data-aos="zoom-in" data-aos-delay="100">
+      <!-- <div class="relative w-32 h-28" data-aos="zoom-in" data-aos-delay="100">
         <img src="assets/shape.png" class="w-full h-full rounded-b-full cursor-pointer"
           onclick="navigateToBankDetails()" />
         <div class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none">
           <img src="https://cdn-icons-png.flaticon.com/128/522/522554.png" class="w-8 h-8 mb-1 invert" />
           <span class="text-sm text-white">Bank</span>
         </div>
-      </div>
+      </div> -->
       <!-- Tab 3 -->
       <div class="relative w-32 h-28" data-aos="zoom-in" data-aos-delay="200">
         <img src="assets/shape.png" class="w-full h-full rounded-b-full cursor-pointer" onclick="navigateToKyc()" />
@@ -142,43 +142,62 @@
           <span class="text-sm text-white">Records</span>
         </div>
       </div>
+
+       <div class="relative w-32 h-28 " data-aos="zoom-in" data-aos-delay="600">
+        <img src="assets/shape.png" class="w-full h-full rounded-b-full cursor-pointer"
+          onclick="navigateToMyOrder()"  />
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none">
+          <img src="https://cdn-icons-png.flaticon.com/128/10597/10597732.png"class="w-8 h-8 mb-1 invert" />
+          <span class="text-sm text-white">Order</span>
+        </div>
+      </div>
+
+       <div class="relative w-32 h-28 " data-aos="zoom-in" data-aos-delay="600">
+        <img src="assets/shape.png" class="w-full h-full rounded-b-full cursor-pointer"
+            onclick="navigateToUserProfile()" />
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none">
+          <img src="https://cdn-icons-png.flaticon.com/128/1946/1946429.png"  class="w-8 h-8 mb-1 invert" />
+          <span class="text-sm text-white">Profile</span>
+        </div>
+      </div>
+
       <!-- Tab 6 -->
-      <div class="relative w-32 h-28 " data-aos="zoom-in" data-aos-delay="600">
+      <!-- <div class="relative w-32 h-28 " data-aos="zoom-in" data-aos-delay="600">
         <img src="assets/shape.png" class="w-full h-full rounded-b-full cursor-pointer"
           onclick="navigateToCustomerCard()" />
         <div class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none">
           <img src="https://cdn-icons-png.flaticon.com/128/3037/3037255.png" class="w-8 h-8 mb-1 invert" />
           <span class="text-sm text-white">Card</span>
         </div>
-      </div>
+      </div> -->
 
       <!-- Extra Tabs Hidden by Default on Mobile -->
       <!-- Tab 7 -->
-      <div class="relative w-32 h-28 hidden sm:block" data-extra data-aos="zoom-in" data-aos-delay="600">
+      <!-- <div class="relative w-32 h-28 hidden sm:block" data-extra data-aos="zoom-in" data-aos-delay="600">
         <img src="assets/shape.png" class="w-full h-full rounded-b-full cursor-pointer"
           onclick="navigateTransactionHistory()" />
         <div class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none">
           <img src="https://cdn-icons-png.flaticon.com/128/3503/3503786.png" class="w-8 h-8 mb-1 invert" />
           <span class="text-sm text-white">History</span>
         </div>
-      </div>
+      </div> -->
       <!-- Tab 8 -->
-      <div class="relative w-32 h-28 hidden sm:block" data-extra data-aos="zoom-in" data-aos-delay="700">
+      <!-- <div class="relative w-32 h-28 hidden sm:block" data-extra data-aos="zoom-in" data-aos-delay="700">
         <img src="assets/shape.png" class="w-full h-full rounded-b-full cursor-pointer" onclick="navigateToMyOrder()" />
         <div class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none">
           <img src="https://cdn-icons-png.flaticon.com/128/10597/10597732.png" class="w-8 h-8 mb-1 invert" />
           <span class="text-sm text-white">Order</span>
         </div>
-      </div>
+      </div> -->
       <!-- Tab 9 -->
-      <div class="relative w-32 h-28 hidden sm:block" data-extra data-aos="zoom-in" data-aos-delay="800">
+      <!-- <div class="relative w-32 h-28 hidden sm:block" data-extra data-aos="zoom-in" data-aos-delay="800">
         <img src="assets/shape.png" class="w-full h-full rounded-b-full cursor-pointer"
           onclick="navigateToUserProfile()" />
         <div class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none">
           <img src="https://cdn-icons-png.flaticon.com/128/1946/1946429.png" class="w-8 h-8 mb-1 invert" />
           <span class="text-sm text-white">Profile</span>
         </div>
-      </div>
+      </div> -->
       <!-- Tab 10 -->
       <!-- <div class="relative w-32 h-28 hidden sm:block" data-extra data-aos="zoom-in" data-aos-delay="900">
         <img src="assets/shape.png" class="w-full h-full rounded-b-full cursor-pointer"
@@ -257,6 +276,7 @@
       <span id="toggleText">Show More</span>
     </div>
   </section>
+
 
   <!-- about us  -->
   <!-- Our Story Section -->

@@ -127,19 +127,16 @@ function toggleTabs() {
 }
 
 // button for branding video
- const video = document.getElementById("brandVideo");
-  const toggleBtn = document.getElementById("toggleBtn");
+  const video = document.getElementById('brandVideo');
+  const toggleBtn = document.getElementById('toggleBtn');
 
-  toggleBtn.addEventListener("click", () => {
+  toggleBtn.addEventListener('click', () => {
+    // Only toggle playback, DO NOT trigger fullscreen
     if (video.paused) {
       video.play();
-      toggleBtn.textContent = "⏸"; // Pause icon
+      toggleBtn.textContent = '⏸';
     } else {
       video.pause();
-      toggleBtn.textContent = "▶"; // Play icon
+      toggleBtn.textContent = '▶';
     }
   });
-
-  // Optional: Keep icon in sync if video paused/played from other sources
-  video.addEventListener("play", () => toggleBtn.textContent = "⏸");
-  video.addEventListener("pause", () => toggleBtn.textContent = "▶");

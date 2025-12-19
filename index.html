@@ -72,15 +72,26 @@
 
   <!-- brnading video  visible on all view-->
   <section class="relative w-full h-auto lg:h-[100vh] overflow-hidden bg-black">
-    <video id="brandVideo" loop playsinline webkit-playsinline class="w-full h-full object-cover">
-      <source src="assets/srialankar.mp4" type="video/mp4">
-    </video>
-     <!-- Play/Pause toggle button -->
+    <video 
+    id="brandVideo" 
+    loop 
+    playsinline 
+    webkit-playsinline 
+    muted 
+    class="w-full h-full object-cover"
+  >
+    <source src="assets/srialankar.mp4" type="video/mp4">
+  </video>
+
   <button id="toggleBtn" aria-label="Play/Pause video"
-    class="absolute bottom-3 right-3 w-8 h-8 lg:w-8 lg:h-6 flex items-center justify-center text-black text-3xl cursor-pointer select-none">
+    class="absolute bottom-3 right-3 w-8 h-8 lg:w-8 lg:h-6 flex items-center justify-center text-white text-3xl cursor-pointer select-none">
     ▶
   </button>
   </section>
+
+  
+
+
   <!-- <source src="assets/branding-video.webm" type="video/webm"> -->
 
   <!-- title info  -->

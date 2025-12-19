@@ -72,18 +72,14 @@
 
   <!-- brnading video  visible on all view-->
   <section class="relative w-full h-auto lg:h-[100vh] overflow-hidden bg-black">
-    <video  id="brandVideo" loop playsinline webkit-playsinline class="w-full h-full object-cover">
+    <video id="brandVideo" loop playsinline webkit-playsinline class="w-full h-full object-cover">
       <source src="assets/srialankar.mp4" type="video/mp4">
     </video>
-      <!-- Custom Play Button -->
-  <button
-    id="playBtn"
-    aria-label="Play video"
-    class="absolute inset-0 flex items-center justify-center bg-black/40"
-  >
-    <span class="w-16 h-16 lg:w-20 lg:h-20 rounded-full bg-white flex items-center justify-center">
-      ▶
-    </span>
+     <!-- Play/Pause toggle button -->
+  <button id="toggleBtn" aria-label="Play/Pause video"
+    class="absolute bottom-3 right-3 w-8 h-8 lg:w-8 lg:h-6 flex items-center justify-center text-black text-3xl cursor-pointer select-none">
+    ▶
+  </button>
   </section>
   <!-- <source src="assets/branding-video.webm" type="video/webm"> -->
 
@@ -165,8 +161,8 @@
         </div>
       </div>
 
-        <!-- Tab 12 -->
-       <div class="relative w-32 h-28 " data-aos="zoom-in" data-aos-delay="600">
+      <!-- Tab 12 -->
+      <div class="relative w-32 h-28 " data-aos="zoom-in" data-aos-delay="600">
         <img src="assets/shape.png" class="w-full h-full rounded-b-full cursor-pointer" onclick="navigateToSetting()" />
         <div class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none">
           <img src="https://cdn-icons-png.flaticon.com/128/2099/2099058.png" class="w-8 h-8 mb-1 invert" />

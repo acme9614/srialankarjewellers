@@ -127,14 +127,19 @@ function toggleTabs() {
 }
 
 // button for branding video
-const video = document.getElementById("brandVideo");
-const playBtn = document.getElementById("playBtn");
+ const video = document.getElementById("brandVideo");
+  const toggleBtn = document.getElementById("toggleBtn");
 
-playBtn.addEventListener("click", async () => {
-  try {
-    await video.play();   // user gesture → iOS allows inline play
-    playBtn.style.display = "none";
-  } catch (err) {
-    console.error("Video play failed:", err);
-  }
-});
+  toggleBtn.addEventListener("click", () => {
+    if (video.paused) {
+      video.play();
+      toggleBtn.textContent = "⏸"; // Pause icon
+    } else {
+      video.pause();
+      toggleBtn.textContent = "▶"; // Play icon
+    }
+  });
+
+  // Optional: Keep icon in sync if video paused/played from other sources
+  video.addEventListener("play", () => toggleBtn.textContent = "⏸");
+  video.addEventListener("pause", () => toggleBtn.textContent = "▶");

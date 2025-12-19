@@ -92,36 +92,49 @@ function navigateToHomePage() {
 
 // branding slider on mobile screen 
 
-  new Swiper('.myMobileSlider', {
-    slidesPerView: "auto",
-    spaceBetween: 12,
-    centeredSlides: true,
-    loop: true,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
-  });
+new Swiper('.myMobileSlider', {
+  slidesPerView: "auto",
+  spaceBetween: 12,
+  centeredSlides: true,
+  loop: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+});
 
 
 
 //   services 
- AOS.init({
-      duration: 700,
-      once: false,
-    });
+AOS.init({
+  duration: 700,
+  once: false,
+});
 
 
-     function toggleTabs() {
-      const extraTabs = document.querySelectorAll('[data-extra]');
-      const text = document.getElementById('toggleText');
-      const icon = document.getElementById('toggleIcon');
+function toggleTabs() {
+  const extraTabs = document.querySelectorAll('[data-extra]');
+  const text = document.getElementById('toggleText');
+  const icon = document.getElementById('toggleIcon');
 
-      let isHidden = [...extraTabs].some(tab => tab.classList.contains('hidden'));
-      extraTabs.forEach(tab => {
-        tab.classList.toggle('hidden', !isHidden);
-      });
+  let isHidden = [...extraTabs].some(tab => tab.classList.contains('hidden'));
+  extraTabs.forEach(tab => {
+    tab.classList.toggle('hidden', !isHidden);
+  });
 
-      text.innerText = isHidden ? 'Show Less' : 'Show More';
-      icon.classList.toggle('rotate-180', isHidden);
-    }
+  text.innerText = isHidden ? 'Show Less' : 'Show More';
+  icon.classList.toggle('rotate-180', isHidden);
+}
+
+// button for branding video
+const video = document.getElementById("brandVideo");
+const playBtn = document.getElementById("playBtn");
+
+playBtn.addEventListener("click", async () => {
+  try {
+    await video.play();   // user gesture → iOS allows inline play
+    playBtn.style.display = "none";
+  } catch (err) {
+    console.error("Video play failed:", err);
+  }
+});

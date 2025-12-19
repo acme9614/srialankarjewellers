@@ -58,7 +58,7 @@
         <a href="#" onclick="navigateSchemeRecords()">Records</a>
         <!-- <a href="#" onclick="navigateToCustomerCard()">Card</a> -->
         <!-- <a href="#" onclick="navigateTransactionHistory()">History</a> -->
-        <a href="#" onclick="navigateToMyOrder()">Order</a>
+        <!-- <a href="#" onclick="navigateToMyOrder()">Order</a> -->
         <a href="#" onclick="navigateToUserProfile()">Profile</a>
         <!-- <a href="#" onclick="navigateToDigitalGold()">Gold</a> -->
         <!-- <a href="#" onclick="navigateToPanchang()">Panchang</a> -->
@@ -91,9 +91,9 @@
   <section class="px-4 py-8">
     <!-- Tabs Grid -->
     <div id="tabsGrid"
-      class="max-w-4xl mx-auto grid grid-cols-3 md:grid-cols-4 lg:grid-cols-4  gap-4 place-items-center justify-center">
+      class="max-w-4xl mx-auto grid grid-cols-3 md:grid-cols-3 lg:grid-cols-3  gap-4 place-items-center justify-center">
       <!-- Tab 1 -->
-      <div class="relative w-32 h-28" data-aos="zoom-in" data-aos-delay="0">
+      <div class="relative w-32 h-28" data-aos="zoom-in" data-aos-delay="100">
         <img src="assets/shape.png" class="w-full h-full rounded-b-full cursor-pointer" onclick="navigateToScheme()" />
         <div class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none">
           <img src="https://cdn-icons-png.flaticon.com/128/10150/10150740.png" class="w-8 h-8 mb-1 invert" />
@@ -128,7 +128,7 @@
         </div>
       </div>
       <!-- Tab 5 -->
-      <div class="relative w-32 h-28 " data-aos="zoom-in" data-aos-delay="600">
+      <div class="relative w-32 h-28 " data-aos="zoom-in" data-aos-delay="400">
         <img src="assets/shape.png" class="w-full h-full rounded-b-full cursor-pointer"
           onclick="navigateSchemeRecords()" />
         <div class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none">
@@ -137,20 +137,31 @@
         </div>
       </div>
 
-      <div class="relative w-32 h-28 " data-aos="zoom-in" data-aos-delay="600">
+
+
+      <!-- <div class="relative w-32 h-28 " data-aos="zoom-in" data-aos-delay="600">
         <img src="assets/shape.png" class="w-full h-full rounded-b-full cursor-pointer" onclick="navigateToMyOrder()" />
         <div class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none">
           <img src="https://cdn-icons-png.flaticon.com/128/10597/10597732.png" class="w-8 h-8 mb-1 invert" />
           <span class="text-sm text-white">Order</span>
         </div>
-      </div>
+      </div> -->
 
-      <div class="relative w-32 h-28 " data-aos="zoom-in" data-aos-delay="600">
+      <div class="relative w-32 h-28 " data-aos="zoom-in" data-aos-delay="500">
         <img src="assets/shape.png" class="w-full h-full rounded-b-full cursor-pointer"
           onclick="navigateToUserProfile()" />
         <div class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none">
           <img src="https://cdn-icons-png.flaticon.com/128/1946/1946429.png" class="w-8 h-8 mb-1 invert" />
           <span class="text-sm text-white">Profile</span>
+        </div>
+      </div>
+
+        <!-- Tab 12 -->
+       <div class="relative w-32 h-28 " data-aos="zoom-in" data-aos-delay="600">
+        <img src="assets/shape.png" class="w-full h-full rounded-b-full cursor-pointer" onclick="navigateToSetting()" />
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none">
+          <img src="https://cdn-icons-png.flaticon.com/128/2099/2099058.png" class="w-8 h-8 mb-1 invert" />
+          <span class="text-sm text-white">Settings</span>
         </div>
       </div>
 
@@ -248,18 +259,10 @@
           <span class="text-sm text-white">Panchang</span>
         </div>
       </div> -->
-      <!-- Tab 12 -->
-      <div class="relative w-32 h-28 hidden sm:block" data-extra data-aos="zoom-in" data-aos-delay="1100">
-        <img src="assets/shape.png" class="w-full h-full rounded-b-full cursor-pointer" onclick="navigateToSetting()" />
-        <div class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none">
-          <img src="https://cdn-icons-png.flaticon.com/128/2099/2099058.png" class="w-8 h-8 mb-1 invert" />
-          <span class="text-sm text-white">Settings</span>
-        </div>
-      </div>
     </div>
 
     <!-- Toggle Button -->
-    <div onclick="toggleTabs()" class="mt-6 flex flex-col items-center mobile-only-toggle">
+    <!-- <div onclick="toggleTabs()" class="mt-6 flex flex-col items-center mobile-only-toggle">
       <button class="flex items-center gap-1 font-medium">
         <svg id="toggleIcon" class="w-8 h-8 transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none"
           viewBox="0 0 24 24" stroke="currentColor">
@@ -267,7 +270,7 @@
         </svg>
       </button>
       <span id="toggleText">Show More</span>
-    </div>
+    </div> -->
   </section>
 
 

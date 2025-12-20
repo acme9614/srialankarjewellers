@@ -71,15 +71,16 @@
   </div>
 
   <!-- brnading video  visible on all view-->
-  <section class="relative w-full h-auto lg:h-[100vh] overflow-hidden bg-black">
-    <video id="brandVideo" playsinline webkit-playsinline muted preload="metadata" class="w-full h-full object-cover">
-      <source src="assets/srialankar.mp4" type="video/mp4">
+  <section class="relative w-full h-auto overflow-hidden bg-black">
+    <video id="brandVideo" autoplay playsinline webkit-playsinline muted preload="metadata"
+      class="w-full h-full object-cover">
+      <source src="assets/branding_video.mp4" type="video/mp4">
     </video>
 
-    <button id="toggleBtn" aria-label="Play/Pause video"
+    <!-- <button id="toggleBtn" aria-label="Play/Pause video"
       class="absolute bottom-3 right-3 w-8 h-8 lg:w-8 lg:h-6 flex items-center justify-center text-white text-3xl cursor-pointer select-none">
       ▶
-    </button>
+    </button> -->
   </section>
 
 
@@ -97,189 +98,149 @@
     </h2>
   </div>
 
-  <section class="px-4 py-8">
-    <!-- Tabs Grid -->
-    <div id="tabsGrid"
-      class="max-w-4xl mx-auto grid grid-cols-3 md:grid-cols-3 lg:grid-cols-3  gap-4 place-items-center justify-center">
-      <!-- Tab 1 -->
-      <div class="relative w-32 h-28" data-aos="zoom-in" data-aos-delay="100">
-        <img src="assets/shape.png" class="w-full h-full rounded-b-full cursor-pointer" onclick="navigateToScheme()" />
-        <div class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none">
-          <img src="https://cdn-icons-png.flaticon.com/128/10150/10150740.png" class="w-8 h-8 mb-1 invert" />
-          <span class="text-sm text-white">Scheme</span>
+  <!-- Services -->
+  <section class="">
+    <!-- Services Grid -->
+    <div id="servicesGrid"
+      class="flex flex-wrap justify-center mx-auto  gap-4 md:gap-6 lg:gap-4 w-full md:w-[90vh] lg:w-[80vh] py-5">
+
+      <!-- Tabs 1–6: always visible -->
+      <div onclick="navigateToScheme()" class="flex flex-col items-center cursor-pointer pb-4" data-aos="fade-up">
+        <div class="w-[100px] h-[22px]  md:w-[120px] md:h-[25px] bg-[#E7BA5C] rounded-t-full shadow-lg"></div>
+        <div
+          class="w-[90px]  h-[110px] md:w-[100px]  md:h-[110px] bg-[#6B0328] clip-banner shadow-lg flex flex-col items-center">
+          <img class="w-10 h-10 my-3 invert" src="https://cdn-icons-png.flaticon.com/128/10150/10150740.png"
+            alt="Scheme" />
+          <p class="text-white font-semibold">Scheme</p>
+        </div>
+      </div>
+
+      <!-- <div onclick="navigateToBankDetails()" class="flex flex-col items-center cursor-pointer pb-4" data-aos="fade-up">
+                <div class="w-[100px] h-[22px]  md:w-[120px] md:h-[25px]  bg-[#E7BA5C] rounded-t-full shadow-lg"></div>
+                <div class="w-[90px]  h-[110px] md:w-[100px]  md:h-[110px] bg-[#6B0328] clip-banner shadow-lg flex flex-col items-center">
+                    <img class="w-10 h-10 my-3 invert" src="https://cdn-icons-png.flaticon.com/128/522/522554.png"
+                        alt="Bank" />
+                    <p class="text-white font-semibold">Bank</p>
+                </div>
+            </div> -->
+
+      <div onclick="navigateToKyc()" class="flex flex-col items-center cursor-pointer pb-4" data-aos="fade-up">
+        <div class="w-[100px] h-[22px]  md:w-[120px] md:h-[25px]  bg-[#E7BA5C] rounded-t-full shadow-lg"></div>
+        <div
+          class="w-[90px]  h-[110px] md:w-[100px]  md:h-[110px] bg-[#6B0328] clip-banner shadow-lg flex flex-col items-center">
+          <img class="w-10 h-10 my-3 invert" src="https://cdn-icons-png.flaticon.com/128/18282/18282110.png"
+            alt="KYC" />
+          <p class="text-white font-semibold">KYC</p>
+        </div>
+      </div>
+
+      <div onclick="navigateToRate()" class="flex flex-col items-center cursor-pointer pb-4" data-aos="fade-up">
+        <div class="w-[100px] h-[22px]  md:w-[120px] md:h-[25px]  bg-[#E7BA5C] rounded-t-full shadow-lg"></div>
+        <div
+          class="w-[90px]  h-[110px] md:w-[100px]  md:h-[110px] bg-[#6B0328] clip-banner shadow-lg flex flex-col items-center">
+          <img class="w-10 h-10 my-3 invert" src="https://cdn-icons-png.flaticon.com/128/592/592015.png" alt="Rate" />
+          <p class="text-white font-semibold">Rate</p>
+        </div>
+      </div>
+
+      <div onclick="navigateSchemeRecords()" class="flex flex-col items-center cursor-pointer pb-4" data-aos="fade-up">
+        <div class="w-[100px] h-[22px]  md:w-[120px] md:h-[25px]  bg-[#E7BA5C] rounded-t-full shadow-lg"></div>
+        <div
+          class="w-[90px]  h-[110px] md:w-[100px]  md:h-[110px] bg-[#6B0328] clip-banner shadow-lg flex flex-col items-center">
+          <img class="w-10 h-10 my-3 invert" src="https://cdn-icons-png.flaticon.com/128/2910/2910768.png"
+            alt="Records" />
+          <p class="text-white font-semibold">Records</p>
+        </div>
+      </div>
+
+      <div onclick="navigateToUserProfile()" class="flex flex-col items-center cursor-pointer pb-4" data-aos="fade-up">
+        <div class="w-[100px] h-[22px]  md:w-[120px] md:h-[25px]  bg-[#E7BA5C] rounded-t-full shadow-lg"></div>
+        <div
+          class="w-[90px]  h-[110px] md:w-[100px]  md:h-[110px] bg-[#6B0328] clip-banner shadow-lg flex flex-col items-center">
+          <img class="w-10 h-10 my-3 invert" src="https://cdn-icons-png.flaticon.com/128/1946/1946429.png"
+            alt="Profile" />
+          <p class="text-white font-semibold">Profile</p>
         </div>
       </div>
 
 
-      <!-- Tab 2 -->
-      <!-- <div class="relative w-32 h-28" data-aos="zoom-in" data-aos-delay="100">
-        <img src="assets/shape.png" class="w-full h-full rounded-b-full cursor-pointer"
-          onclick="navigateToBankDetails()" />
-        <div class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none">
-          <img src="https://cdn-icons-png.flaticon.com/128/522/522554.png" class="w-8 h-8 mb-1 invert" />
-          <span class="text-sm text-white">Bank</span>
-        </div>
-      </div> -->
-      <!-- Tab 3 -->
-      <div class="relative w-32 h-28" data-aos="zoom-in" data-aos-delay="200">
-        <img src="assets/shape.png" class="w-full h-full rounded-b-full cursor-pointer" onclick="navigateToKyc()" />
-        <div class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none">
-          <img src="https://cdn-icons-png.flaticon.com/128/18282/18282110.png" class="w-8 h-8 mb-1 invert" />
-          <span class="text-sm text-white">KYC</span>
-        </div>
-      </div>
-      <!-- Tab 4 -->
-      <div class="relative w-32 h-28" data-aos="zoom-in" data-aos-delay="300">
-        <img src="assets/shape.png" class="w-full h-full rounded-b-full cursor-pointer" onclick="navigateToRate()" />
-        <div class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none">
-          <img src="https://cdn-icons-png.flaticon.com/128/592/592015.png" class="w-8 h-8 mb-1 invert" />
-          <span class="text-sm text-white">Rate</span>
-        </div>
-      </div>
-      <!-- Tab 5 -->
-      <div class="relative w-32 h-28 " data-aos="zoom-in" data-aos-delay="400">
-        <img src="assets/shape.png" class="w-full h-full rounded-b-full cursor-pointer"
-          onclick="navigateSchemeRecords()" />
-        <div class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none">
-          <img src="https://cdn-icons-png.flaticon.com/128/2910/2910768.png" class="w-8 h-8 mb-1 invert" />
-          <span class="text-sm text-white">Records</span>
+      <div onclick="navigateToSetting()" class="flex flex-col items-center cursor-pointer pb-4" data-aos="fade-up">
+        <div class="w-[100px] h-[22px]  md:w-[120px] md:h-[25px]  bg-[#E7BA5C] rounded-t-full shadow-lg"></div>
+        <div
+          class="w-[90px]  h-[110px] md:w-[100px]  md:h-[110px] bg-[#6B0328] clip-banner shadow-lg flex flex-col items-center">
+          <img class="w-10 h-10 my-3 invert" src="https://cdn-icons-png.flaticon.com/128/2099/2099058.png"
+            alt="Settings" />
+          <p class="text-white font-semibold">Settings</p>
         </div>
       </div>
 
+      <!-- <div onclick="navigateToCustomerCard()" class="flex flex-col items-center cursor-pointer pb-4" data-aos="fade-up">
+                <div class="w-[100px] h-[22px]  md:w-[120px] md:h-[25px]  bg-[#E7BA5C] rounded-t-full shadow-lg"></div>
+                <div class="w-[90px]  h-[110px] md:w-[100px]  md:h-[110px] bg-[#6B0328] clip-banner shadow-lg flex flex-col items-center">
+                    <img class="w-10 h-10 my-3 invert" src="https://cdn-icons-png.flaticon.com/128/3037/3037255.png"
+                        alt="Card" />
+                    <p class="text-white font-semibold">Card</p>
+                </div>
+            </div> -->
+
+      <!-- Tabs 7–14: hidden on mobile, visible md+ -->
+      <!-- <div onclick="navigateTransactionHistory()" class="extra-tab hidden md:flex flex-col items-center cursor-pointer pb-4" data-aos="fade-up">
+                <div class="w-[100px] h-[22px]  md:w-[120px] md:h-[25px]  bg-[#E7BA5C] rounded-t-full shadow-lg"></div>
+                <div class="w-[90px]  h-[110px] md:w-[100px]  md:h-[110px] bg-[#6B0328] clip-banner shadow-lg flex flex-col items-center">
+                    <img class="w-10 h-10 my-3 invert" src="https://cdn-icons-png.flaticon.com/128/3503/3503786.png"
+                        alt="History" />
+                    <p class="text-white font-semibold">History</p>
+                </div>
+            </div> -->
+
+      <!-- <div onclick="navigateToMyOrder()" class="extra-tab hidden md:flex flex-col items-center cursor-pointer pb-4" data-aos="fade-up">
+                <div class="w-[100px] h-[22px]  md:w-[120px] md:h-[25px]  bg-[#E7BA5C] rounded-t-full shadow-lg"></div>
+                <div class="w-[90px]  h-[110px] md:w-[100px]  md:h-[110px] bg-[#6B0328] clip-banner shadow-lg flex flex-col items-center">
+                    <img class="w-10 h-10 my-3 invert" src="https://cdn-icons-png.flaticon.com/128/10597/10597732.png"
+                        alt="Order" />
+                    <p class="text-white font-semibold">Order</p>
+                </div>
+            </div> -->
 
 
-      <!-- <div class="relative w-32 h-28 " data-aos="zoom-in" data-aos-delay="600">
-        <img src="assets/shape.png" class="w-full h-full rounded-b-full cursor-pointer" onclick="navigateToMyOrder()" />
-        <div class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none">
-          <img src="https://cdn-icons-png.flaticon.com/128/10597/10597732.png" class="w-8 h-8 mb-1 invert" />
-          <span class="text-sm text-white">Order</span>
-        </div>
-      </div> -->
+      <!-- <div onclick="navigateToPanchang()" class="extra-tab hidden md:flex flex-col items-center cursor-pointer pb-4" data-aos="fade-up">
+                <div class="w-[100px] h-[22px]  md:w-[120px] md:h-[25px]  bg-[#E7BA5C] rounded-t-full shadow-lg"></div>
+                <div class="w-[90px]  h-[110px] md:w-[100px]  md:h-[110px] bg-[#6B0328] clip-banner shadow-lg flex flex-col items-center">
+                    <img class="w-10 h-10 my-3 invert" src="https://cdn-icons-png.flaticon.com/128/3013/3013143.png"
+                        alt="Panchang" />
+                    <p class="text-white font-semibold">Panchang</p>
+                </div>
+            </div> -->
 
-      <div class="relative w-32 h-28 " data-aos="zoom-in" data-aos-delay="500">
-        <img src="assets/shape.png" class="w-full h-full rounded-b-full cursor-pointer"
-          onclick="navigateToUserProfile()" />
-        <div class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none">
-          <img src="https://cdn-icons-png.flaticon.com/128/1946/1946429.png" class="w-8 h-8 mb-1 invert" />
-          <span class="text-sm text-white">Profile</span>
-        </div>
-      </div>
-
-      <!-- Tab 12 -->
-      <div class="relative w-32 h-28 " data-aos="zoom-in" data-aos-delay="600">
-        <img src="assets/shape.png" class="w-full h-full rounded-b-full cursor-pointer" onclick="navigateToSetting()" />
-        <div class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none">
-          <img src="https://cdn-icons-png.flaticon.com/128/2099/2099058.png" class="w-8 h-8 mb-1 invert" />
-          <span class="text-sm text-white">Settings</span>
-        </div>
-      </div>
-
-      <!-- Tab 6 -->
-      <!-- <div class="relative w-32 h-28 " data-aos="zoom-in" data-aos-delay="600">
-        <img src="assets/shape.png" class="w-full h-full rounded-b-full cursor-pointer"
-          onclick="navigateToCustomerCard()" />
-        <div class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none">
-          <img src="https://cdn-icons-png.flaticon.com/128/3037/3037255.png" class="w-8 h-8 mb-1 invert" />
-          <span class="text-sm text-white">Card</span>
-        </div>
-      </div> -->
-
-      <!-- Extra Tabs Hidden by Default on Mobile -->
-      <!-- Tab 7 -->
-      <!-- <div class="relative w-32 h-28 hidden sm:block" data-extra data-aos="zoom-in" data-aos-delay="600">
-        <img src="assets/shape.png" class="w-full h-full rounded-b-full cursor-pointer"
-          onclick="navigateTransactionHistory()" />
-        <div class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none">
-          <img src="https://cdn-icons-png.flaticon.com/128/3503/3503786.png" class="w-8 h-8 mb-1 invert" />
-          <span class="text-sm text-white">History</span>
-        </div>
-      </div> -->
-      <!-- Tab 8 -->
-      <!-- <div class="relative w-32 h-28 hidden sm:block" data-extra data-aos="zoom-in" data-aos-delay="700">
-        <img src="assets/shape.png" class="w-full h-full rounded-b-full cursor-pointer" onclick="navigateToMyOrder()" />
-        <div class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none">
-          <img src="https://cdn-icons-png.flaticon.com/128/10597/10597732.png" class="w-8 h-8 mb-1 invert" />
-          <span class="text-sm text-white">Order</span>
-        </div>
-      </div> -->
-      <!-- Tab 9 -->
-      <!-- <div class="relative w-32 h-28 hidden sm:block" data-extra data-aos="zoom-in" data-aos-delay="800">
-        <img src="assets/shape.png" class="w-full h-full rounded-b-full cursor-pointer"
-          onclick="navigateToUserProfile()" />
-        <div class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none">
-          <img src="https://cdn-icons-png.flaticon.com/128/1946/1946429.png" class="w-8 h-8 mb-1 invert" />
-          <span class="text-sm text-white">Profile</span>
-        </div>
-      </div> -->
-      <!-- Tab 10 -->
-      <!-- <div class="relative w-32 h-28 hidden sm:block" data-extra data-aos="zoom-in" data-aos-delay="900">
-        <img src="assets/shape.png" class="w-full h-full rounded-b-full cursor-pointer"
-          onclick="navigateToDigitalGold()" />
-        <div class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none">
-          <img src="https://cdn-icons-png.flaticon.com/128/1473/1473430.png" class="w-8 h-8 mb-1 invert" />
-          <span class="text-sm text-white">Gold</span>
+      <!-- box10 -->
+      <!-- <div onclick="navigateToDigitalGold()" class="flex flex-col items-center cursor-pointer" data-aos="fade-up">
+        <div class="w-[100px] h-[22px]  md:w-[120px] md:h-[25px]  bg-[#E7BA5C] rounded-t-full shadow-lg"></div>
+        <div class="w-[90px]  h-[110px] md:w-[100px]  md:h-[110px] bg-[#6B0328] clip-banner shadow-lg flex flex-col items-center">
+          <img class="w-10 h-10 my-3 invert" src="https://cdn-icons-png.flaticon.com/128/1473/1473430.png" alt="Gold"/>
+          <p class="text-white font-semibold">Gold</p>
         </div>
       </div> -->
 
 
-      <!-- 
-         <div class="relative w-32 h-28 sm:block"  data-extra data-aos="zoom-in" data-aos-delay="1100" >
-          <img
-            src="assets/shape.png"
-            class="w-full h-full rounded-b-full cursor-pointer"
-            onclick="navigateToCatalogues()"
-          />
-          <div
-            class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none"
-          >
-            <img
-              src="https://cdn-icons-png.flaticon.com/128/29/29341.png"
-              class="w-8 h-8 mb-1 invert"
-            />
-            <span class="text-sm text-white">Catalogues</span>
-          </div>
-        </div>
-
-         <div class="relative w-32 h-28 sm:block"  data-extra  data-aos="zoom-in" data-aos-delay="1200" >
-          <img
-            src="assets/shape.png"
-            class="w-full h-full rounded-b-full cursor-pointer"
-            onclick="navigateToQuickPurchase()"
-          />
-          <div
-            class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none"
-          >
-            <img
-              src="https://cdn-icons-png.flaticon.com/128/1019/1019709.png"
-              class="w-8 h-8 mb-1 invert"
-            />
-            <span class="text-sm text-white">Quick <br> Purchase</span>
-          </div>
-        </div> -->
-
-
-
-      <!-- Tab 11 -->
-      <!-- <div class="relative w-32 h-28 hidden sm:block" data-extra data-aos="zoom-in" data-aos-delay="1000">
-        <img src="assets/shape.png" class="w-full h-full rounded-b-full cursor-pointer"
-          onclick="navigateToPanchang()" />
-        <div class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none">
-          <img src="https://cdn-icons-png.flaticon.com/128/3013/3013143.png" class="w-8 h-8 mb-1 invert" />
-          <span class="text-sm text-white">Panchang</span>
+      <!-- box12 -->
+      <!-- <div onclick="navigateToCatalogues()" class="flex flex-col items-center cursor-pointer" data-aos="fade-up">
+        <div class="w-[100px] h-[22px]  md:w-[120px] md:h-[25px]  bg-[#E7BA5C] rounded-t-full shadow-lg"></div>
+        <div class="w-[90px]  h-[110px] md:w-[100px]  md:h-[110px] bg-[#6B0328] clip-banner shadow-lg flex flex-col items-center">
+          <img class="w-10 h-10 my-3 invert" src="https://cdn-icons-png.flaticon.com/128/29/29341.png" alt="Catalogues"/>
+          <p class="text-white font-semibold">Catalogues</p>
         </div>
       </div> -->
+
+      <!-- box13 -->
+      <!-- <div onclick="navigateToQuickPurchase()" class="flex flex-col items-center cursor-pointer" data-aos="fade-up">
+        <div class="w-[100px] h-[22px]  md:w-[120px] md:h-[25px]  bg-[#E7BA5C] rounded-t-full shadow-lg"></div>
+        <div class="w-[90px]  h-[110px] md:w-[100px]  md:h-[110px] bg-[#6B0328] clip-banner shadow-lg flex flex-col items-center">
+          <img class="w-10 h-10 my-3 invert" src="https://cdn-icons-png.flaticon.com/128/1019/1019709.png" alt="Quick Purchase"/>
+          <p class="text-white text-center font-semibold">Quick <br> Purchase</p>
+        </div>
+      </div> -->
+
     </div>
-
-    <!-- Toggle Button -->
-    <!-- <div onclick="toggleTabs()" class="mt-6 flex flex-col items-center mobile-only-toggle">
-      <button class="flex items-center gap-1 font-medium">
-        <svg id="toggleIcon" class="w-8 h-8 transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none"
-          viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-        </svg>
-      </button>
-      <span id="toggleText">Show More</span>
-    </div> -->
   </section>
 
 

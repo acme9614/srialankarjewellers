@@ -90,20 +90,22 @@ function navigateToHomePage() {
 }
 
 
-// branding slider on mobile screen 
-
-new Swiper('.myMobileSlider', {
-  slidesPerView: "auto",
-  spaceBetween: 12,
-  centeredSlides: true,
-  loop: true,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-});
-
-
+// branding slider 
+ const swiper = new Swiper(".mySwiper", {
+    loop: true,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
 
 //   services 
 AOS.init({
@@ -126,17 +128,3 @@ function toggleTabs() {
   icon.classList.toggle('rotate-180', isHidden);
 }
 
-// button for branding video
-  const video = document.getElementById('brandVideo');
-  const toggleBtn = document.getElementById('toggleBtn');
-
-  toggleBtn.addEventListener('click', () => {
-    // Only toggle playback, DO NOT trigger fullscreen
-    if (video.paused) {
-      video.play();
-      toggleBtn.textContent = '⏸';
-    } else {
-      video.pause();
-      toggleBtn.textContent = '▶';
-    }
-  });

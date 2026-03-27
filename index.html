@@ -59,6 +59,7 @@
         <!-- <a href="#" onclick="navigateToCustomerCard()">Card</a> -->
         <!-- <a href="#" onclick="navigateTransactionHistory()">History</a> -->
         <!-- <a href="#" onclick="navigateToMyOrder()">Order</a> -->
+        <a href="#" onclick="navigateToARVirtualTryOn()">Virtual Try-On</a>
         <a href="#" onclick="navigateToUserProfile()">Profile</a>
         <!-- <a href="#" onclick="navigateToDigitalGold()">Gold</a> -->
         <!-- <a href="#" onclick="navigateToPanchang()">Panchang</a> -->
@@ -70,30 +71,30 @@
     <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden"></div>
   </div>
 
-    <!-- brnading section  -->
-<section class="w-full relative">
-  <div class="swiper mySwiper" data-aos="fade-up" data-aos-duration="300">
-    <div class="swiper-wrapper">
-      <!-- Slide 1 -->
-      <div class="swiper-slide">
-        <img src="assets/banner1.png" alt="Banner 1" class="w-full h-auto" />
+  <!-- brnading section  -->
+  <section class="w-full relative">
+    <div class="swiper mySwiper" data-aos="fade-up" data-aos-duration="300">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <img src="assets/banner1.png" alt="Banner 1" class="w-full h-auto" />
+        </div>
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <img src="assets/banner2.png" alt="Banner 2" class="w-full h-auto" />
+        </div>
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <img src="assets/banner3.png" alt="Banner 3" class="w-full h-auto" />
+        </div>
       </div>
-      <!-- Slide 2 -->
-      <div class="swiper-slide">
-        <img src="assets/banner2.png" alt="Banner 2" class="w-full h-auto" />
-      </div>
-      <!-- Slide 3 -->
-      <div class="swiper-slide">
-        <img src="assets/banner3.png" alt="Banner 3" class="w-full h-auto" />
-      </div>
+      <!-- Pagination -->
+      <div class="swiper-pagination !bottom-5"></div>
+      <!-- Navigation Buttons -->
+      <div class="swiper-button-prev !text-white !bg-black/50 rounded-full p-2 shadow-md"></div>
+      <div class="swiper-button-next !text-white !bg-black/50 rounded-full p-2 shadow-md"></div>
     </div>
-    <!-- Pagination -->
-    <div class="swiper-pagination !bottom-5"></div>
-    <!-- Navigation Buttons -->
-    <div class="swiper-button-prev !text-white !bg-black/50 rounded-full p-2 shadow-md"></div>
-    <div class="swiper-button-next !text-white !bg-black/50 rounded-full p-2 shadow-md"></div>
-  </div>
-</section>
+  </section>
 
 
 
@@ -162,6 +163,16 @@
           <img class="w-10 h-10 my-3 invert" src="https://cdn-icons-png.flaticon.com/128/2910/2910768.png"
             alt="Records" />
           <p class="text-white font-semibold">Records</p>
+        </div>
+      </div>
+
+      <div onclick="navigateToARVirtualTryOn()" class="flex flex-col items-center cursor-pointer pb-4"
+        data-aos="fade-up">
+        <div class="w-[100px] h-[22px]  md:w-[120px] md:h-[25px]  bg-[#E7BA5C] rounded-t-full shadow-lg"></div>
+        <div
+          class="w-[90px]  h-[110px] md:w-[100px]  md:h-[110px] bg-[#6B0328] clip-banner shadow-lg flex flex-col items-center">
+          <img class="w-10 h-10 my-2" src="assets/virtual.png" alt="VirtualTryOn" />
+          <p class="text-white font-semibold">Virtual<br class="block" />Try-On</p>
         </div>
       </div>
 

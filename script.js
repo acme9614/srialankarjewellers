@@ -89,23 +89,28 @@ function navigateToHomePage() {
   Toaster.postMessage("navigateToHomePage");
 }
 
+function navigateToARVirtualTryOn() {
+  Toaster.postMessage("navigateToARVirtualTryOn");
+}
+
+
 
 // branding slider 
- const swiper = new Swiper(".mySwiper", {
-    loop: true,
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
+const swiper = new Swiper(".mySwiper", {
+  loop: true,
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
 
 //   services 
 AOS.init({

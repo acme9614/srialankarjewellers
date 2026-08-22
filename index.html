@@ -49,19 +49,19 @@
 
       <!-- Drawer Navigation Links -->
       <nav class="flex flex-col gap-4 px-6 py-6 text-black">
-        <a href="#" onclick="navigateToScheme()">Scheme</a>
-        <!-- <a href="#" onclick="navigateToCatalogues()">Catalogues</a> -->
-        <!-- <a href="#" onclick="navigateToQuickPurchase()">Quick Purchase</a> -->
-        <a href="#" onclick="navigateToBankDetails()">Bank</a>
-        <a href="#" onclick="navigateToKyc()">KYC</a>
+        <a href="#" onclick="navigateToScheme()">Saving Scheme</a>
         <a href="#" onclick="navigateToRate()">Today's Rate</a>
-        <a href="#" onclick="navigateSchemeRecords()">Records</a>
+        <a href="#" onclick="navigateToKyc()">My Kyc</a>
+        <a href="#" onclick="navigateToBankDetails()">My Bank Details</a>
+        <!-- <a href="#" onclick="navigateToQuickPurchase()">Quick Purchase</a> -->
+        <!-- <a href="#" onclick="navigateSchemeRecords()">Records</a> -->
         <!-- <a href="#" onclick="navigateToCustomerCard()">Card</a> -->
-        <!-- <a href="#" onclick="navigateTransactionHistory()">History</a> -->
+        <a href="#" onclick="navigateTransactionHistory()">Online Transactions</a>
         <!-- <a href="#" onclick="navigateToMyOrder()">Order</a> -->
-        <a href="#" onclick="navigateToARVirtualTryOn()">Virtual Try-On</a>
         <a href="#" onclick="navigateToDigitalGold()">Digital Gold</a>
-        <a href="#" onclick="navigateToUserProfile()">Profile</a>
+        <a href="#" onclick="navigateToARVirtualTryOn()">Virtual Try-On</a>
+        <a href="#" onclick="navigateToCatalogues()">Catalogues</a>
+        <a href="#" onclick="navigateToUserProfile()">My Profile</a>
         <!-- <a href="#" onclick="navigateToPanchang()">Panchang</a> -->
         <a href="#" onclick="navigateToSetting()">Settings</a>
       </nav>
@@ -122,28 +122,9 @@
         <div class="w-[100px] h-[22px]  md:w-[120px] md:h-[25px] bg-[#E7BA5C] rounded-t-full shadow-lg"></div>
         <div
           class="w-[90px]  h-[120px] md:w-[100px]  md:h-[110px] bg-[#6B0328] clip-banner shadow-lg flex flex-col items-center">
-          <img class="w-10 h-10 my-3 invert" src="https://cdn-icons-png.flaticon.com/128/10150/10150740.png"
+          <img class="w-10 h-10 my-2 invert" src="https://cdn-icons-png.flaticon.com/128/10150/10150740.png"
             alt="Scheme" />
-          <p class="text-white font-semibold">Scheme</p>
-        </div>
-      </div>
-
-      <div onclick="navigateToBankDetails()" class="flex flex-col items-center cursor-pointer pb-4" data-aos="fade-up">
-                <div class="w-[100px] h-[22px]  md:w-[120px] md:h-[25px]  bg-[#E7BA5C] rounded-t-full shadow-lg"></div>
-                <div class="w-[90px]  h-[120px] md:w-[100px]  md:h-[110px] bg-[#6B0328] clip-banner shadow-lg flex flex-col items-center">
-                    <img class="w-10 h-10 my-3 invert" src="https://cdn-icons-png.flaticon.com/128/522/522554.png"
-                        alt="Bank" />
-                    <p class="text-white font-semibold">Bank</p>
-                </div>
-            </div>
-
-      <div onclick="navigateToKyc()" class="flex flex-col items-center cursor-pointer pb-4" data-aos="fade-up">
-        <div class="w-[100px] h-[22px]  md:w-[120px] md:h-[25px]  bg-[#E7BA5C] rounded-t-full shadow-lg"></div>
-        <div
-          class="w-[90px]  h-[120px] md:w-[100px]  md:h-[110px] bg-[#6B0328] clip-banner shadow-lg flex flex-col items-center">
-          <img class="w-10 h-10 my-3 invert" src="https://cdn-icons-png.flaticon.com/128/18282/18282110.png"
-            alt="KYC" />
-          <p class="text-white font-semibold">KYC</p>
+          <p class="text-white  font-semibold text-sm text-center">Saving <br> Scheme</p>
         </div>
       </div>
 
@@ -151,12 +132,33 @@
         <div class="w-[100px] h-[22px]  md:w-[120px] md:h-[25px]  bg-[#E7BA5C] rounded-t-full shadow-lg"></div>
         <div
           class="w-[90px]  h-[120px] md:w-[100px]  md:h-[110px] bg-[#6B0328] clip-banner shadow-lg flex flex-col items-center">
-          <img class="w-10 h-10 my-3 invert" src="https://cdn-icons-png.flaticon.com/128/592/592015.png" alt="Rate" />
-          <p class="text-white font-semibold text-center">Today's Rate</p>
+          <img class="w-10 h-10 my-2 invert" src="https://cdn-icons-png.flaticon.com/128/592/592015.png" alt="Rate" />
+          <p class="text-white font-semibold text-center text-sm text-center">Today's <br> Rate</p>
         </div>
       </div>
 
-      <div onclick="navigateSchemeRecords()" class="flex flex-col items-center cursor-pointer pb-4" data-aos="fade-up">
+
+      <div onclick="navigateToKyc()" class="flex flex-col items-center cursor-pointer pb-4" data-aos="fade-up">
+        <div class="w-[100px] h-[22px]  md:w-[120px] md:h-[25px]  bg-[#E7BA5C] rounded-t-full shadow-lg"></div>
+        <div
+          class="w-[90px]  h-[120px] md:w-[100px]  md:h-[110px] bg-[#6B0328] clip-banner shadow-lg flex flex-col items-center">
+          <img class="w-10 h-10 my-3 invert" src="https://cdn-icons-png.flaticon.com/128/18282/18282110.png"
+            alt="KYC" />
+          <p class="text-white font-semibold text-sm text-center">My  Kyc</p>
+        </div>
+      </div>
+
+      <div onclick="navigateToBankDetails()" class="flex flex-col items-center cursor-pointer pb-4" data-aos="fade-up">
+        <div class="w-[100px] h-[22px]  md:w-[120px] md:h-[25px]  bg-[#E7BA5C] rounded-t-full shadow-lg"></div>
+        <div
+          class="w-[90px]  h-[120px] md:w-[100px]  md:h-[110px] bg-[#6B0328] clip-banner shadow-lg flex flex-col items-center">
+          <img class="w-10 h-10 my-3 invert" src="https://cdn-icons-png.flaticon.com/128/522/522554.png" alt="Bank" />
+          <p class="text-white font-semibold text-sm text-center">My Bank <br> Details</p>
+        </div>
+      </div>
+
+
+      <!-- <div onclick="navigateSchemeRecords()" class="flex flex-col items-center cursor-pointer pb-4" data-aos="fade-up">
         <div class="w-[100px] h-[22px]  md:w-[120px] md:h-[25px]  bg-[#E7BA5C] rounded-t-full shadow-lg"></div>
         <div
           class="w-[90px]  h-[120px] md:w-[100px]  md:h-[110px] bg-[#6B0328] clip-banner shadow-lg flex flex-col items-center">
@@ -164,7 +166,30 @@
             alt="Records" />
           <p class="text-white font-semibold">Records</p>
         </div>
+      </div> -->
+
+
+      <div onclick="navigateTransactionHistory()"
+        class="extra-tab hidden md:flex flex-col items-center cursor-pointer pb-4" data-aos="fade-up">
+        <div class="w-[100px] h-[22px]  md:w-[120px] md:h-[25px]  bg-[#E7BA5C] rounded-t-full shadow-lg"></div>
+        <div
+          class="w-[90px]  h-[110px] md:w-[100px]  md:h-[110px] bg-[#6B0328] clip-banner shadow-lg flex flex-col items-center">
+          <img class="w-10 h-10 my-2 invert" src="https://cdn-icons-png.flaticon.com/128/3503/3503786.png"
+            alt="History" />
+          <p class="text-white font-semibold text-sm text-center">Online Transactions</p>
+        </div>
       </div>
+
+      <div onclick="navigateToDigitalGold()" class="flex flex-col items-center cursor-pointer" data-aos="fade-up">
+        <div class="w-[100px] h-[22px]  md:w-[120px] md:h-[25px]  bg-[#E7BA5C] rounded-t-full shadow-lg"></div>
+        <div
+          class="w-[90px]  h-[120px] md:w-[100px]  md:h-[110px] bg-[#6B0328] clip-banner shadow-lg flex flex-col items-center">
+          <img class="w-10 h-10 my-3 invert" src="https://cdn-icons-png.flaticon.com/128/1473/1473430.png"
+            alt="Digital Gold" />
+          <p class="text-white font-semibold text-center text-sm text-center">Digital <br> Gold</p>
+        </div>
+      </div>
+
 
       <div onclick="navigateToARVirtualTryOn()" class="flex flex-col items-center cursor-pointer pb-4"
         data-aos="fade-up">
@@ -172,15 +197,17 @@
         <div
           class="w-[90px]  h-[120px] md:w-[100px]  md:h-[110px] bg-[#6B0328] clip-banner shadow-lg flex flex-col items-center">
           <img class="w-10 h-10 my-2" src="assets/virtual.png" alt="VirtualTryOn" />
-          <p class="text-white font-semibold">Virtual<br class="block" />Try-On</p>
+          <p class="text-white font-semibold text-sm text-center">Virtual<br class="block" />Try-On</p>
         </div>
       </div>
 
-      <div onclick="navigateToDigitalGold()" class="flex flex-col items-center cursor-pointer" data-aos="fade-up">
+      <div onclick="navigateToCatalogues()" class="flex flex-col items-center cursor-pointer" data-aos="fade-up">
         <div class="w-[100px] h-[22px]  md:w-[120px] md:h-[25px]  bg-[#E7BA5C] rounded-t-full shadow-lg"></div>
-        <div class="w-[90px]  h-[120px] md:w-[100px]  md:h-[110px] bg-[#6B0328] clip-banner shadow-lg flex flex-col items-center">
-          <img class="w-10 h-10 my-3 invert" src="https://cdn-icons-png.flaticon.com/128/1473/1473430.png" alt="Digital Gold"/>
-          <p class="text-white font-semibold text-center">Digital Gold</p>
+        <div
+          class="w-[90px]  h-[110px] md:w-[100px]  md:h-[110px] bg-[#6B0328] clip-banner shadow-lg flex flex-col items-center">
+          <img class="w-10 h-10 my-3 invert" src="https://cdn-icons-png.flaticon.com/128/29/29341.png"
+            alt="Catalogues" />
+          <p class="text-white font-semibold text-sm text-center">Catalogues</p>
         </div>
       </div>
 
@@ -188,9 +215,9 @@
         <div class="w-[100px] h-[22px]  md:w-[120px] md:h-[25px]  bg-[#E7BA5C] rounded-t-full shadow-lg"></div>
         <div
           class="w-[90px]  h-[120px] md:w-[100px]  md:h-[110px] bg-[#6B0328] clip-banner shadow-lg flex flex-col items-center">
-          <img class="w-10 h-10 my-3 invert" src="https://cdn-icons-png.flaticon.com/128/1946/1946429.png"
+          <img class="w-10 h-10 my-2 invert" src="https://cdn-icons-png.flaticon.com/128/1946/1946429.png"
             alt="Profile" />
-          <p class="text-white font-semibold">Profile</p>
+          <p class="text-white font-semibold text-sm text-center">My <br> Profile</p>
         </div>
       </div>
 
@@ -201,7 +228,7 @@
           class="w-[90px]  h-[120px] md:w-[100px]  md:h-[110px] bg-[#6B0328] clip-banner shadow-lg flex flex-col items-center">
           <img class="w-10 h-10 my-3 invert" src="https://cdn-icons-png.flaticon.com/128/2099/2099058.png"
             alt="Settings" />
-          <p class="text-white font-semibold">Settings</p>
+          <p class="text-white font-semibold text-sm text-center">Settings</p>
         </div>
       </div>
 
@@ -215,14 +242,6 @@
             </div> -->
 
       <!-- Tabs 7–14: hidden on mobile, visible md+ -->
-      <!-- <div onclick="navigateTransactionHistory()" class="extra-tab hidden md:flex flex-col items-center cursor-pointer pb-4" data-aos="fade-up">
-                <div class="w-[100px] h-[22px]  md:w-[120px] md:h-[25px]  bg-[#E7BA5C] rounded-t-full shadow-lg"></div>
-                <div class="w-[90px]  h-[110px] md:w-[100px]  md:h-[110px] bg-[#6B0328] clip-banner shadow-lg flex flex-col items-center">
-                    <img class="w-10 h-10 my-3 invert" src="https://cdn-icons-png.flaticon.com/128/3503/3503786.png"
-                        alt="History" />
-                    <p class="text-white font-semibold">History</p>
-                </div>
-            </div> -->
 
       <!-- <div onclick="navigateToMyOrder()" class="extra-tab hidden md:flex flex-col items-center cursor-pointer pb-4" data-aos="fade-up">
                 <div class="w-[100px] h-[22px]  md:w-[120px] md:h-[25px]  bg-[#E7BA5C] rounded-t-full shadow-lg"></div>
@@ -244,13 +263,6 @@
             </div> -->
 
       <!-- box12 -->
-      <!-- <div onclick="navigateToCatalogues()" class="flex flex-col items-center cursor-pointer" data-aos="fade-up">
-        <div class="w-[100px] h-[22px]  md:w-[120px] md:h-[25px]  bg-[#E7BA5C] rounded-t-full shadow-lg"></div>
-        <div class="w-[90px]  h-[110px] md:w-[100px]  md:h-[110px] bg-[#6B0328] clip-banner shadow-lg flex flex-col items-center">
-          <img class="w-10 h-10 my-3 invert" src="https://cdn-icons-png.flaticon.com/128/29/29341.png" alt="Catalogues"/>
-          <p class="text-white font-semibold">Catalogues</p>
-        </div>
-      </div> -->
 
       <!-- box13 -->
       <!-- <div onclick="navigateToQuickPurchase()" class="flex flex-col items-center cursor-pointer" data-aos="fade-up">
